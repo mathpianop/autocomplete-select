@@ -1,0 +1,21 @@
+.autocomplete-results {
+  position: absolute;
+  border: 1px dotted #ccc;
+  padding: 3px;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.autocomplete-results ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.autocomplete-results ul li {
+  padding: 5px 0;
+}
+.autocomplete-results .active {
+  background: #eee;
+}
