@@ -92,7 +92,9 @@ function autocomplete(params) {
     matches = matchesList
     //If there are no matches for the query, remove the results panel
     if (matches.length === 0) return destroyResultsPanel();
-    matchNodes = createMatchNodes(matches.map(formatMatch))
+    //Format the matches if a formatMatch function is provided
+    const formattedMatches = (formatMatch ? matches.map(formatMatch) : matches)
+    matchNodes = createMatchNodes(formattedMatches)
     const list = matchNodes.reduce((listParent, matchNode) => {
       listParent.appendChild(matchNode)
       return listParent

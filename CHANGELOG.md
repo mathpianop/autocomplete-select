@@ -1,0 +1,10 @@
+# Change Log
+
+## 1.0.1 (2021-10-13)
+
+### Added
+- Generate clear button for input autofilled with initialValue
+- Run onClear callback when user manually clears with backspace
+
+### Fixed
+- Reverting to previous selection now applies to input autofilled with initialValue
