@@ -4,16 +4,8 @@
   "description": "Create a simple form field selector with autocomplete search",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "build:watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mathpianop",
-  "license": "MIT",
-  "devDependencies": {
-    "css-loader": "^6.4.0",
-    "style-loader": "^3.3.0",
-    "webpack": "^5.31.0",
-    "webpack-cli": "^4.6.0"
-  }
+  "license": "MIT"
 }

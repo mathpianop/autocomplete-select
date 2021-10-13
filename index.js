@@ -1,5 +1,3 @@
-import "./autocomplete-select.css";
-
 function autocomplete(params) {
   
   const createInput = function(placeholder) {
@@ -178,7 +176,11 @@ function autocomplete(params) {
   const handleInput = function(e) {
     onInput(e.target.value, displayMatches);
     if (clearBtnEnabled) ensureClearBtn();
+    //If user has manually cleared, run onClear callback
+    console.log(e.key, input.value);
+    if (e.key === "Backspace" && input.value === "") onClear();
   }
+
 
   input.addEventListener("keyup", (e) => {
     switch (e.key) {
@@ -197,6 +199,12 @@ function autocomplete(params) {
         handleInput(e);
     }
   })
+
+  if (clearBtnEnabled) ensureClearBtn();
 }
+
+
+
+
 
 export default autocomplete;
