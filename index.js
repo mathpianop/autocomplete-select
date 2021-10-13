@@ -19,7 +19,7 @@ function autocomplete(params) {
   const initialValue = params.initialValue;
   const input = createInput(params.placeholder);
 
-  let selectedText = "";
+  let selectedText = ( initialValue || "" );
   let matches = [];
   let matchNodes = [];
   let activeMatchId = -1;
@@ -177,7 +177,6 @@ function autocomplete(params) {
     onInput(e.target.value, displayMatches);
     if (clearBtnEnabled) ensureClearBtn();
     //If user has manually cleared, run onClear callback
-    console.log(e.key, input.value);
     if (e.key === "Backspace" && input.value === "") onClear();
   }
 
