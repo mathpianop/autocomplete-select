@@ -87,7 +87,7 @@ function autocomplete(params) {
     })
   }
 
-  const displayMatches = function(matchesList) {
+  const suggestMatches = function(matchesList) {
     //Store the externally derived matchesList in the matches variable
     matches = matchesList
     //If there are no matches for the query, remove the results panel
@@ -176,7 +176,7 @@ function autocomplete(params) {
   });
 
   const handleInput = function(e) {
-    onInput(e.target.value, displayMatches);
+    onInput(e.target.value, suggestMatches);
     if (clearBtnEnabled) ensureClearBtn();
     //If user has manually cleared, run onClear callback
     if (e.key === "Backspace" && input.value === "") onClear();
