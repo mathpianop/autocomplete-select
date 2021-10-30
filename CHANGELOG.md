@@ -9,3 +9,8 @@
 
 ### Fixed
 - Reverting to previous selection now applies to input autofilled with initialValue
+
+# 1.0.2
+
+### Fixed
+- Additional input box no longer generated when page accessed with back/forward

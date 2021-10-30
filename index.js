@@ -1,6 +1,10 @@
 function autocomplete(params) {
   
   const createInput = function(placeholder) {
+    //Short-circuit if input element already exists
+    if (params.container.querySelector(".autocomplete-input")) {
+      return
+    } 
     const inputEl = document.createElement("INPUT");
     inputEl.type = "text";
     inputEl.classList.add("autocomplete-input");
@@ -10,6 +14,11 @@ function autocomplete(params) {
     return inputEl
   }
 
+  const getOrCreateInput = function() {
+    const existingInput = params.container.querySelector(".autocomplete-input");
+    return (existingInput ? existingInput : createInput(params.placeholder));
+  }
+
   const container = params.container;
   const onInput = params.onInput;
   const formatMatch = params.formatMatch;
@@ -17,7 +26,7 @@ function autocomplete(params) {
   const onClear = params.onClear;
   const onSelect = params.onSelect;
   const initialValue = params.initialValue;
-  const input = createInput(params.placeholder);
+  const input = getOrCreateInput();
 
   let selectedText = ( initialValue || "" );
   let matches = [];

@@ -1,6 +1,6 @@
 {
   "name": "autocomplete-select",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a simple form field selector with autocomplete search",
   "main": "index.js",
   "scripts": {
