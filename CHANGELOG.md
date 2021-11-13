@@ -19,6 +19,7 @@
 
 ### Fixed
 - Disabled browser autocomplete suggestions
+- Text overflow for results panel
 
 ### Added
 - Option to pass name attribute

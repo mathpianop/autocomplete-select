@@ -20,7 +20,7 @@
 
 .autocomplete-results ul li {
   padding: 5px 0;
-  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .autocomplete-results .active {
   background: #eee;
