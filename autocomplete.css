@@ -1,5 +1,10 @@
+
+
 .autocomplete-results {
   position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   border: 1px dotted #ccc;
   padding: 3px;
   width: 100%;

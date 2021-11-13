@@ -1,6 +1,8 @@
 # Autocomplete Select
 Autocomplete Select is a simple and lightweight JavaScript autocomplete widget.
 
+![Styled autocomplete example](autocomplete-example.png)
+
 ## Installation
 
 Install the package:
