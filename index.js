@@ -8,8 +8,9 @@ function autocomplete(params) {
     const inputEl = document.createElement("INPUT");
     inputEl.type = "text";
     inputEl.classList.add("autocomplete-input");
-    if (placeholder) inputEl.placeholder = placeholder;
-    if (initialValue) inputEl.value = initialValue;
+    if (params.placeholder) inputEl.placeholder = placeholder;
+    if (params.initialValue) inputEl.value = initialValue;
+    if (params.name) inputEl.name = params.name
     container.appendChild(inputEl);
     return inputEl
   }

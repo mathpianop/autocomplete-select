@@ -14,3 +14,8 @@
 
 ### Fixed
 - Additional input box no longer generated when page accessed with back/forward
+
+# 1.0.3
+
+### Added
+- Option to pass name attribute

@@ -85,7 +85,8 @@ You can pass the following options to `autocomplete()`
 |`onClear`|`Function`| This function will be called when the input is cleared (either with the clear button or manually with backspace) |
 |`onSelect`|`Function(selectedMatch)`| This function will be called when the user selects a suggestion (either by clicking on a suggestion or by hitting the Enter key). The parameter is the match item provided by `onInput`|
 |`initialValue`|`String`| Sets an autofill value for the input field. |
-|`placeholder`|`String`| Sets a placeholder value for the input field.|
+|`placeholder`|`String`| Sets a `placeholder` value for the input field.|
+|`name`|`String`| Sets the `name` attribute for the input field.|
 
 ## CSS
 
