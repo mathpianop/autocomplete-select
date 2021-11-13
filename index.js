@@ -8,6 +8,7 @@ function autocomplete(params) {
     const inputEl = document.createElement("INPUT");
     inputEl.type = "text";
     inputEl.classList.add("autocomplete-input");
+    inputEl.autocomplete = "off";
     if (params.placeholder) inputEl.placeholder = placeholder;
     if (params.initialValue) inputEl.value = initialValue;
     if (params.name) inputEl.name = params.name
@@ -27,6 +28,7 @@ function autocomplete(params) {
   const onClear = params.onClear;
   const onSelect = params.onSelect;
   const initialValue = params.initialValue;
+  const debug = params.debug
   const input = getOrCreateInput();
 
   let selectedText = ( initialValue || "" );
@@ -49,7 +51,9 @@ function autocomplete(params) {
   }
 
   const selectMatch = function() {
-    selectedText = matchNodes[activeMatchId].innerText;
+    if (matchNodes[activeMatchId]) {
+      selectedText = matchNodes[activeMatchId].innerText;
+    }
     input.value = selectedText;
     onSelect(matches[activeMatchId]);
     input.blur();
@@ -175,7 +179,7 @@ function autocomplete(params) {
     if (selectedText && clearBtnEnabled) {
       input.value = selectedText
     }
-    destroyResultsPanel();
+    if (!debug) destroyResultsPanel();
   });
 
   input.addEventListener("keydown", (e) => {

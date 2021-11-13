@@ -87,6 +87,7 @@ You can pass the following options to `autocomplete()`
 |`initialValue`|`String`| Sets an autofill value for the input field. |
 |`placeholder`|`String`| Sets a `placeholder` value for the input field.|
 |`name`|`String`| Sets the `name` attribute for the input field.|
+|`debug`|`Boolean`| Keeps the results open onBlur for development purposes|
 
 ## CSS
 

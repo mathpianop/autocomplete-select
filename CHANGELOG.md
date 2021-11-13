@@ -17,5 +17,9 @@
 
 # 1.0.3
 
+### Fixed
+- Disabled browser autocomplete suggestions
+
 ### Added
 - Option to pass name attribute
+- Debug option to keep results panel up during development
